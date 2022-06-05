@@ -49,3 +49,5 @@ type Expected = {
     }
   }
 }
+
+type CC = DeepReadonly<X>
