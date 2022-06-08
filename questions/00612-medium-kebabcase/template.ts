@@ -1,1 +1,1 @@
-type KebabCase<S> = any
+type KebabCase<S, First = true> = S extends `${infer F}${infer Rest}` ? F extends Lowercase<F> ? `${F}${KebabCase<Rest, false>}` : `${First extends true ? '' : '-'}${Lowercase<F>}${KebabCase<Rest, false>}` : S
