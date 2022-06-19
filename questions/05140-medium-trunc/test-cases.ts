@@ -8,4 +8,5 @@ type cases = [
   Expect<Equal<Trunc<'1.234'>, '1'>>,
   Expect<Equal<Trunc<'-10.234'>, '-10'>>,
   Expect<Equal<Trunc<10>, '10'>>,
+  Expect<Equal<Trunc<-10>, '10'>>,
 ]
