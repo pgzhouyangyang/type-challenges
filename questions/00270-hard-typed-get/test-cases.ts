@@ -18,3 +18,5 @@ type Data = {
   }
   hello: 'world'
 }
+
+type CCC = Get<Data, 'foo.bar'>

@@ -12,3 +12,5 @@ type cases = [
   Expect<Equal<ParsePrintFormat<'Hello %s: score is %d.'>, ['string', 'dec']>>,
   Expect<Equal<ParsePrintFormat<'The result is %'>, []>>,
 ]
+
+type CCC = ParsePrintFormat<'The result is %%d.'>

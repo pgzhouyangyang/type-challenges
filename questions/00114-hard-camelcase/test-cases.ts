@@ -10,3 +10,5 @@ type cases = [
   Expect<Equal<CamelCase<''>, ''>>,
   Expect<Equal<CamelCase<'😎'>, '😎'>>,
 ]
+
+type CCC = CamelCase<'HELLO_WORLD_WITH_TYPES'>

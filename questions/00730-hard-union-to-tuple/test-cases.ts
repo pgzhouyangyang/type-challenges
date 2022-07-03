@@ -15,3 +15,8 @@ type cases = [
   Expect<Equal<ExtractValuesOfTuple<UnionToTuple<never>>, never>>,
   Expect<Equal<ExtractValuesOfTuple<UnionToTuple<'a' | 'b' | 'c' | 1 | 2 | 'd' | 'e' | 'f' | 'g'>>, 'f' | 'e' | 1 | 2 | 'g' | 'c' | 'd' | 'a' | 'b'>>,
 ]
+
+
+type CCC = UnionToTuple<'a' | 'b'>
+
+type bbbb = keyof 'a' | 'b'
