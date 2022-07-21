@@ -1,1 +1,1 @@
-type Split<S extends string, SEP extends string> = any
+type Split<S extends string, SEP extends string,Res extends string[] = []> = string extends S ? string[] : S extends SEP ? Res : S extends `${infer First}${SEP}${infer Last}` ? Split<Last,SEP,[...Res,First]> : [...Res,S]

@@ -1,1 +1,9 @@
-declare function defineStore(store: unknown): unknown
+declare function defineStore<S, G, A>(store: {
+  id: string;
+  state: () => S;
+  getters: G &
+    ThisType<
+      Readonly<S> & { [K in keyof G]: G[K] extends () => infer R ? R : never }
+    >;
+  actions: A & ThisType<S & A>;
+}): S & { [K in keyof G]: G[K] extends () => infer R ? R : never } & A;
